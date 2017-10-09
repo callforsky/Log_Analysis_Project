@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+
+
 import psycopg2
 
 
@@ -64,7 +67,8 @@ def print_err_result(phrase, answer):
 
 
 # print the outputs to the reader
-print_result("The 3 most popular articles are ", run_query(query_1))
-print_result("The most popular author of all time is ", run_query(query_2))
-print_err_result("The days more than 1% of requests "
-                 "lead to errors are ", run_query(query_3))
+if __name__ == '__main__':
+    print_result("The 3 most popular articles are ", run_query(query_1))
+    print_result("The most popular author of all time is ", run_query(query_2))
+    print_err_result("The days more than 1% of requests "
+                     "lead to errors are ", run_query(query_3))
